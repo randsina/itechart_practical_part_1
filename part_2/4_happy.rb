@@ -14,8 +14,4 @@ def square_of_digits(number, array)
   end
 end
 
-p happy?(7) # => "Happy"
-p happy?(1) # => "Happy"
-p happy?(3) # => "Unhappy"
-p happy?(8) # => "Unhappy"
-p happy?(41243) # => "Unhappy"
+p happy?(ARGV.first.to_i)
