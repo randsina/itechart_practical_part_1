@@ -1,4 +1,4 @@
-def find_missed_numbers(number, array) # (1..number).to_a - array.uniq
+def find_missed_numbers(number, array) # (1..number).to_a - array
   i = 1
   missed_numbers = []
   array.each_with_index do |n, index|
