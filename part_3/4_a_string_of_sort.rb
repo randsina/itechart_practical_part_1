@@ -1,10 +1,5 @@
-def sort_string(string, chars)
-  chars.split('').uniq.reverse.each do |char|
-    new_str = string.split('').select {|c| c == char }.join
-    string.delete! char
-    string = new_str + string
-  end
-  string
+def sort_string(base_string, chars)
+  base_string.split('').sort_by { |c| chars.index(c) || chars.length } * ''
 end
 
 p sort_string('foos', 'of') # => "oofs"
