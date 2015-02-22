@@ -8,10 +8,10 @@ module Ghost
   class << self
     def hi; end
   end
-  # Declare is instance method for module Ghost, but you cannot create instance module Ghost and invoke method as 'Ghost.bye'.
+  # Declare is an instance method for module Ghost, but you cannot create instance module Ghost and invoke method as 'Ghost.bye'.
   # You may add module in a class.
-  # If you add line 'include Ghost', method 'bye' will be instance method of the class.
-  # If you add line 'extend Ghost', method 'bye' will be class method of the class.
+  # If you add a line 'include Ghost', method 'bye' will be a instance method of the class.
+  # If you add a line 'extend Ghost', method 'bye' will be a class method of the class.
   def bye; end
 end
 ```
