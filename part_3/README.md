@@ -1,6 +1,7 @@
 ###1. Use gem
 ```sh
-$ ruby 1_use_gem.rb 4556449019512531
+$ bundle
+$ bundle exec ruby 1_use_gem.rb 4556449019512531
 ```
 ###2. Hash
 ```sh
