@@ -1,9 +1,9 @@
 ##This is the first practical part for iTechArt courses.
-####Run application:
+###1. UpDown
 ```sh
-$ ruby example.rb
+$ ruby 1_up_down.rb
 ```
-####Run the 3rd task with params
+####3. Jerseys Of Michael Jordan
 ```sh
-$ ruby example.rb 23 45 12
+$ ruby 3_jerseys_sum_argv.rb 23 45 12
 ```

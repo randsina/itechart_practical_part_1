@@ -1,5 +1,5 @@
 def jerseys_sum(args)
-  puts args.map(&:to_i).reduce(:+)
+  args.map(&:to_i).reduce(:+) || 0
 end
 
-jerseys_sum(ARGV)
+p jerseys_sum(ARGV)
