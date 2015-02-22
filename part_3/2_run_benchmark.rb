@@ -14,7 +14,7 @@ hash = {}
 ITEMS_COUNT.times { |t| hash[t] = t }
 
 Benchmark.bm do |x|
-  x.report("my hash".ljust(7)) { TIMES.times { |t| my_hash[rand ITEMS_COUNT] } }
-  x.report("hash".ljust(7)) { TIMES.times { |t| hash[rand ITEMS_COUNT] } }
-  x.report("array".ljust(7)) { TIMES.times { |t| array.index(rand ITEMS_COUNT) } }
+  x.report('my hash'.ljust(7)) { TIMES.times { my_hash[rand ITEMS_COUNT] } }
+  x.report('hash'.ljust(7)) { TIMES.times { hash[rand ITEMS_COUNT] } }
+  x.report('array'.ljust(7)) { TIMES.times { array.index(rand ITEMS_COUNT) } }
 end
