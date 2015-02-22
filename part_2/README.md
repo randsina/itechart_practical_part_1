@@ -8,21 +8,22 @@ $ ruby 4_happy.rb 7
 ```
 ###5. Disappeared
 ```sh
-$ ruby 5_disappeared.rb 9 1 2 5 4 7 8 2 1 5 4 3
+$ ruby 5_disappeared.rb 9 1 2 4 7
 ```
-, где первый аргумент - k, остальные - массив чисел.
 ###6. Sherlock on numbers
 ```sh
 ruby 6_sherlock_on_numbers.rb 1 2 3 4 2 2 1 4 4
 ```
 ###For The Curious
-1. Выражение __?a__, где вместо __a__ может быть любой символ, преобразуется в строку __"a"__. Таким образом выражение __?!__:
+1. Expression __?a__, where instead __a__ can be any character is converted to a string __"a"__. Such the expression __?!__:
 ```ruby
-?! == "!"
- => true
+?!
+ => "!"
 ```
-Так как в Ruby всё, кроме *nil* и *false*, является *truthy*, применяя оператор отрицания **!**, выражение **!?!** вернет *false*.
-2. Выражение
+Since Ruby everything, except *nil* and *false*, is a *truthy*, using the negation operator **!** expression **!?!** returns *false*.
+
+
+2. Flip-flop operator
 ```ruby
 10.times { |i| puts i if i == 3 .. i == 5 }
 3
@@ -30,4 +31,6 @@ ruby 6_sherlock_on_numbers.rb 1 2 3 4 2 2 1 4 4
 5
  => 10
 ```
-изначально проверяет: равен ли аргумент на 3. Если нет - переходит к следующей итерации. Если да - выводит данный аргумент, и будет выводить все аргументы в последующих итерациях, пока не встретит аргумент равный 5.
+
+It's a flip-flop operator. Flip-flop syntax comes from Perl.
+The condition evaluates to false every time it is evaluated until the first part evaluates to true. Then it evaluates to true until the second part evaluates to true. Under the current plan, this perlism will remove from Ruby 3.0

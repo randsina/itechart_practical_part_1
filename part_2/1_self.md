@@ -1,11 +1,17 @@
 ###1. Self
 ```ruby
+# Module Ghost is declare.
 module Ghost
+  # Declare modular method 'boo'. This method is called 'Ghost.boo'
   def self.boo; end
+  # Also declare modular method 'hi'. This method is called 'Ghost.hi'
   class << self
     def hi; end
   end
+  # Declare is instance method for module Ghost, but you cannot create instance module Ghost and invoke method as 'Ghost.bye'.
+  # You may add module in a class.
+  # If you add line 'include Ghost', method 'bye' will be instance method of the class.
+  # If you add line 'extend Ghost', method 'bye' will be class method of the class.
   def bye; end
 end
 ```
-Создаётся модуль с двумя модульными методами: boo и hi. Эти методы можно вызывать так: Ghost.boo и Ghost.hi. Метод bye является экземплярным для модуля Ghost, но для класса, включающий данный метод, является экземплярным, либо классовым в зависимости от способа добавления модуля в класс: include Ghost или extend Ghost соответственно.
