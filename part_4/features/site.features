@@ -1,0 +1,17 @@
+Feature: Sign up
+  In order to sign up to Github
+  A user
+  Should be a able to sign in GitHub
+  
+  Scenario: Unsuccessful sign up
+    Given user visits the sign up page
+    When  he submits the registration info
+    Then  he should see message: "There were problems creating your account."
+
+  Scenario: Successful sign up
+    Given user visits the sign up page
+    When  he enters valid sign up information
+    And   he submits the registration info
+    Then  he should see message: "Welcome to GitHub"
+    And   he submits the finish registration info
+    Then  he should see message: "your first repository"
